@@ -1,12 +1,12 @@
-package main
+package ifPrime
 
-import("fmt")
-
-func main() {
-  fmt.Println(ifPrime(5));
-  fmt.Println(ifPrime(6));
-  nextPrime(12);
-}
+// import("fmt")
+//
+// func main() {
+//   fmt.Println(ifPrime(5));
+//   fmt.Println(ifPrime(6));
+//   nextPrime(12);
+// }
 
 func ifPrime(num int) bool {
   prime := true
@@ -18,13 +18,13 @@ func ifPrime(num int) bool {
   return prime
 }
 
-func nextPrime(num int) {
-  i := num + 1;
-  for {
-    if ifPrime(i) {
-      break;
-    }
-    i++
-  }
-  fmt.Println(i)
-}
+// func nextPrime(num int) {
+//   i := num + 1;
+//   for {
+//     if ifPrime(i) {
+//       break;
+//     }
+//     i++
+//   }
+//   fmt.Println(i)
+// }
