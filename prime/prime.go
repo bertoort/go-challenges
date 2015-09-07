@@ -8,6 +8,8 @@ package ifPrime
 //   nextPrime(12);
 // }
 
+// import "github.com/bertoort/go-challenges"
+
 func ifPrime(num int) bool {
   prime := true
   for i := 2; i < num/2; i++ {

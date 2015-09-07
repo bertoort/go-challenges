@@ -1,6 +1,6 @@
 package ifPrime
 
-import ("testing"; "fmt"; "github.com/bertort/go-challenges")
+import ("testing"; "fmt")
 
 func Test_ifPrime(t *testing.T) {
   if ifPrime(5) != true {
