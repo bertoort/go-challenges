@@ -11,7 +11,7 @@ func Test_ifPrime(t *testing.T) {
 		t.Error()
 	}
 	if nextPrime(5) != 7 {
-		fmt.Println(nextPrime(5))
-		t.Error("does not equal 7")
+		fmt.Println(nextPrime(5), "does not equal 7")
+		t.Error()
 	}
 }
