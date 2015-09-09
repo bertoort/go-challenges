@@ -6,20 +6,28 @@ import (
 )
 
 func Test_roman(t *testing.T) {
-	if roman("IV") != 4 {
-		fmt.Println(roman("IV"), "does not equal 4")
+	if forRoman("IV") != 4 {
+		fmt.Println(forRoman("IV"), "does not equal 4")
 		t.Error()
 	}
-	if roman("XI") != 11 {
-		fmt.Println(roman("XI"), "does not equal 11")
+	if forRoman("XI") != 11 {
+		fmt.Println(forRoman("XI"), "does not equal 11")
 		t.Error()
 	}
-	if roman("C") != 100 {
-		fmt.Println(roman("C"), "does not equal 100")
+	if forRoman("C") != 100 {
+		fmt.Println(forRoman("C"), "does not equal 100")
 		t.Error()
 	}
-	if roman("MCMVII") != 1907 {
-		fmt.Println(roman("MCMVII"), "does not equal 1907")
+	if forRoman("MCMVII") != 1907 {
+		fmt.Println(forRoman("MCMVII"), "does not equal 1907")
+		t.Error()
+	}
+	if recursionRoman("IV", 0) != 4 {
+		fmt.Println(recursionRoman("IV", 0), "does not equal 4")
+		t.Error()
+	}
+	if recursionRoman("MCMVII", 0) != 1907 {
+		fmt.Println(recursionRoman("MCMVII", 0), "does not equal 1907")
 		t.Error()
 	}
 }

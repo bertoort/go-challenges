@@ -8,7 +8,7 @@ func main() {
 
 }
 
-func roman(letters string) int {
+func forRoman(letters string) int {
 	split := strings.Split(letters, "")
 	sum := 0
 	skip := false
@@ -30,6 +30,24 @@ func roman(letters string) int {
 		}
 	}
 	return sum
+}
+
+func recursionRoman(letters string, total int) int {
+	split := strings.Split(letters, "")
+	if len(split) == 0 {
+		return total
+	} else if len(split) == 1 {
+		total += convertRoman(strings.ToLower(split[0]))
+		return total
+	}
+	curr := convertRoman(strings.ToLower(split[0]))
+	next := convertRoman(strings.ToLower(split[1]))
+	if curr >= next {
+		total += curr
+		return recursionRoman(strings.Join(split[1:], ""), total)
+	}
+	total += next - curr
+	return recursionRoman(strings.Join(split[2:], ""), total)
 }
 
 func convertRoman(letter string) int {
